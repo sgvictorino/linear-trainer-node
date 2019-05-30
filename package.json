@@ -16,7 +16,8 @@
     "scikit",
     "machine",
     "learning",
-    "scikit-learn"
+    "scikit-learn",
+    "sklearn"
   ],
   "author": "Solomon Victorino",
   "license": "MIT",
