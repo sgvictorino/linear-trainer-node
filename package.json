@@ -1,0 +1,45 @@
+{
+  "name": "linear-trainer",
+  "version": "0.1.0",
+  "description": "Use scikit-learn's Python linear regression functionalities from Node.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "xo --fix && ava --verbose"
+  },
+  "keywords": [
+    "regression",
+    "linear",
+    "regression",
+    "python",
+    "wrapper",
+    "scikit",
+    "machine",
+    "learning",
+    "scikit-learn"
+  ],
+  "author": "Solomon Victorino",
+  "license": "MIT",
+  "dependencies": {
+    "python-shell": "^1.0.7",
+    "shelljs": "^0.8.3",
+    "signale": "^1.4.0",
+    "temp": "^0.9.0",
+    "temporary": "^1.0.1"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "space": 4,
+    "semicolon": true,
+    "prettier": true
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false
+  }
+}
