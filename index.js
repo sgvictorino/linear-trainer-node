@@ -1,4 +1,10 @@
-const pythonTrainerBaseCommand = "python3 linear-trainer-cmd/linear-trainer.py";
+const path = require("path");
+
+const pythonScriptPath = path.join(
+    __dirname,
+    "linear-trainer-cmd/linear-trainer.py"
+);
+const pythonTrainerBaseCommand = `python3 ${pythonScriptPath}`;
 const {exec} = require("shelljs");
 const signale = require("signale");
 
