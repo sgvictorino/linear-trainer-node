@@ -1,3 +1,5 @@
 node_modules
 # Serialized Python model files
 *.pickle
+# test coverage output
+.nyc_output/
