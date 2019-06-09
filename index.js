@@ -39,12 +39,19 @@ module.exports.predict = (inputData, modelPath, integerResults = false) => {
     return false;
 };
 
-module.exports.train = (inputData, outputData, modelPath) => {
+module.exports.train = (
+    inputData,
+    outputData,
+    modelPath,
+    returnCrossValidationMetrics = false
+) => {
     const dataToPass = `{
         "input_data": ${JSON.stringify(inputData)},
         "output_data": ${JSON.stringify(outputData)}
     }`;
-    const command = `${pythonTrainerBaseCommand} --train '${dataToPass}' --model ${modelPath}`;
+    const command = `${pythonTrainerBaseCommand} --train '${dataToPass}' --model ${modelPath} ${
+        returnCrossValidationMetrics ? "--cross-validation" : ""
+    }`;
     signale.debug(`calling '${command}'`);
     const res = exec(command, {silent: true});
     const {code} = res;
