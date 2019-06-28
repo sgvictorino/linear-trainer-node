@@ -44,6 +44,7 @@ module.exports.train = (
     outputData,
     modelPath,
     trainSize = null,
+    gradientBoostingRegression = false,
     returnCrossValidationMetrics = false
 ) => {
     const dataToPass = `{
@@ -52,6 +53,7 @@ module.exports.train = (
     }`;
     const command = `${pythonTrainerBaseCommand} --train '${dataToPass}' --model ${modelPath}
         ${returnCrossValidationMetrics ? "--cross-validation" : ""} 
+        ${gradientBoostingRegression ? "--gradient-boosting-regression" : ""}
         ${trainSize !== null ? "--train-size " + trainSize : ""}
     `;
     signale.debug(`calling '${command}'`);
