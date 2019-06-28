@@ -51,10 +51,7 @@ module.exports.train = (
         "input_data": ${JSON.stringify(inputData)},
         "output_data": ${JSON.stringify(outputData)}
     }`;
-    const command = `${pythonTrainerBaseCommand} --train '${dataToPass}' --model ${modelPath}
-        ${returnCrossValidationMetrics ? "--cross-validation" : ""} 
-        ${gradientBoostingRegression ? "--gradient-boosting-regression" : ""}
-        ${trainSize !== null ? "--train-size " + trainSize : ""}
+    const command = `${pythonTrainerBaseCommand} --train '${dataToPass}' --model ${modelPath} ${returnCrossValidationMetrics ? "--cross-validation" : ""} ${gradientBoostingRegression ? "--gradient-boosting-regression" : ""} ${trainSize !== null ? "--train-size " + trainSize : ""}
     `;
     signale.debug(`calling '${command}'`);
     const res = exec(command, {silent: true});
