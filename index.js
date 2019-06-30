@@ -43,9 +43,9 @@ module.exports.train = (
     inputData,
     outputData,
     modelPath,
-    trainSize = null,
+    returnCrossValidationMetrics = false,
     gradientBoostingRegression = false,
-    returnCrossValidationMetrics = false
+    trainSize = null
 ) => {
     const dataToPass = `{
         "input_data": ${JSON.stringify(inputData)},
