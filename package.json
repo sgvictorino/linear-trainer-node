@@ -36,7 +36,10 @@
   "xo": {
     "space": 4,
     "semicolon": true,
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "max-params": "off"
+    }
   },
   "prettier": {
     "tabWidth": 4,
