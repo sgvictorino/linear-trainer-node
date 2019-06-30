@@ -1,6 +1,6 @@
 {
   "name": "linear-trainer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Use scikit-learn's Python linear regression functionalities from Node.",
   "main": "index.js",
   "scripts": {
